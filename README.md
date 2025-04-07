@@ -71,38 +71,19 @@ Evaluate **RevisEval** on the RewardBench.
 ```bash
 ## Our generated crowd judgments are in ``results/rewardbench_mtbench_PoolModified_gpt-4o.json''
 ## You should fill your api-key.
-run MAIN.ipynb
+run main.ipynb
 ```
 
-In main.ipynb, we provide the *criticizing selection/outcome removal part*, *crowd-judgment as context in prompt part*, and *evaluating CCE part*.
-
-### 🔍 Whole Pipeline
-
-1. **Generate Crowd-Responses**: At this stage, you can use any LLM of your choice to generate the corresponding crowd responses for the prompts in the benchmark.
-    
-2. **Generate Crowd-Judgments**: At this stage,
-
-```bash
-## if you want to compare crowd response to response B,
-python main.py [benchmarkname: e.g.,rewardbench] [judgd prompt, e.g.,mtbench] [crowd judgment model name: e.g.,qwen-2.5-3b-instruct],default [base judge model: e.g.,gpt-4o] False True False
-
-## if you want to compare crowd response to response A,
-python main.py [benchmarkname: e.g.,rewardbench] [judgd prompt, e.g.,mtbench] default,[crowd judgment model name: e.g.,qwen-2.5-3b-instruct] [base judge model: e.g.,gpt-4o] False True False
-```
-
-## 📌 Coming Soon
-
-- [ ] Support for whole pipeline generation
-- [ ] Compare to other test-time scaling for LLM-as-a-Judge/Generative RM.
 
 ## 📄 Citation
 
 ```bibtex
-@inprocedings{zhang2025crowdcomparativereasoningunlocking,
-    title={Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge}, 
-    author={Qiyuan Zhang and Yufei Wang and Yuxin Jiang and Liangyou Li and Chuhan Wu and Yasheng Wang and Xin Jiang and Lifeng Shang and Ruiming Tang and Fuyuan Lyu and Chen Ma},
-    year={2025},
-    eprint={2502.12501},
-    booktitle={arXiv},
+@inproceedings{
+zhang2025reviseval,
+title={RevisEval: Improving {LLM}-as-a-Judge via Response-Adapted References},
+author={Qiyuan Zhang and Yufei Wang and Tiezheng YU and Yuxin Jiang and Chuhan Wu and Liangyou Li and Yasheng Wang and Xin Jiang and Lifeng Shang and Ruiming Tang and Fuyuan Lyu and Chen Ma},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=1tBvzOYTLF}
 }
 ···
