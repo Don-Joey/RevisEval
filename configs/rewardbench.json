@@ -1,0 +1,7 @@
+{
+    "name": "rewardbench",
+    "dataset_key": "allenai/reward-bench",
+    "instructions_data_path": "E:\/self_consistency_judge\/datafolder\/",
+    "instructions_responses_pairs_data_path": "E:\/self_consistency_judge\/datafolder\/",
+    "evaluate_mode": "preference"
+}
