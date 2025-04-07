@@ -69,7 +69,6 @@ pip install -r requirements.txt
 Evaluate **RevisEval** on the RewardBench.
 
 ```bash
-## Our generated crowd judgments are in ``results/rewardbench_mtbench_PoolModified_gpt-4o.json''
 ## You should fill your api-key.
 run main.ipynb
 ```
